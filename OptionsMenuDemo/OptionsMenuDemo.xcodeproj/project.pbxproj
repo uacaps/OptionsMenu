@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		A677E1301B9793ED009074A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677E12F1B9793ED009074A0 /* AppDelegate.swift */; };
-		A677E1321B9793ED009074A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677E1311B9793ED009074A0 /* ViewController.swift */; };
 		A677E1351B9793ED009074A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A677E1331B9793ED009074A0 /* Main.storyboard */; };
 		A677E1371B9793ED009074A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A677E1361B9793ED009074A0 /* Assets.xcassets */; };
 		A677E13A1B9793ED009074A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A677E1381B9793ED009074A0 /* LaunchScreen.storyboard */; };
+		A677E1451B979466009074A0 /* CAPSOptionsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677E1421B979466009074A0 /* CAPSOptionsMenu.swift */; };
+		A677E1461B979466009074A0 /* CAPSOptionsMenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677E1431B979466009074A0 /* CAPSOptionsMenuAction.swift */; };
+		A677E1471B979466009074A0 /* CAPSOptionsMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677E1441B979466009074A0 /* CAPSOptionsMenuButton.swift */; };
+		A677E14E1B97972F009074A0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677E14C1B97972F009074A0 /* MenuTableViewController.swift */; };
+		A677E14F1B97972F009074A0 /* MenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A677E14D1B97972F009074A0 /* MenuTableViewController.xib */; };
+		A677E1521B979745009074A0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677E1501B979745009074A0 /* MenuTableViewCell.swift */; };
+		A677E1531B979745009074A0 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A677E1511B979745009074A0 /* MenuTableViewCell.xib */; };
+		A677E1561B979847009074A0 /* SmallOptionsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A677E1541B979847009074A0 /* SmallOptionsMenuViewController.swift */; };
+		A677E1571B979847009074A0 /* SmallOptionsMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A677E1551B979847009074A0 /* SmallOptionsMenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A677E12C1B9793ED009074A0 /* OptionsMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionsMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A677E12F1B9793ED009074A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A677E1311B9793ED009074A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A677E1341B9793ED009074A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A677E1361B9793ED009074A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A677E1391B9793ED009074A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A677E13B1B9793ED009074A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A677E1421B979466009074A0 /* CAPSOptionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAPSOptionsMenu.swift; path = ../../Classes/CAPSOptionsMenu.swift; sourceTree = "<group>"; };
+		A677E1431B979466009074A0 /* CAPSOptionsMenuAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAPSOptionsMenuAction.swift; path = ../../Classes/CAPSOptionsMenuAction.swift; sourceTree = "<group>"; };
+		A677E1441B979466009074A0 /* CAPSOptionsMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAPSOptionsMenuButton.swift; path = ../../Classes/CAPSOptionsMenuButton.swift; sourceTree = "<group>"; };
+		A677E14C1B97972F009074A0 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		A677E14D1B97972F009074A0 /* MenuTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewController.xib; sourceTree = "<group>"; };
+		A677E1501B979745009074A0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		A677E1511B979745009074A0 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		A677E1541B979847009074A0 /* SmallOptionsMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallOptionsMenuViewController.swift; sourceTree = "<group>"; };
+		A677E1551B979847009074A0 /* SmallOptionsMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallOptionsMenuViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +71,53 @@
 			isa = PBXGroup;
 			children = (
 				A677E12F1B9793ED009074A0 /* AppDelegate.swift */,
-				A677E1311B9793ED009074A0 /* ViewController.swift */,
 				A677E1331B9793ED009074A0 /* Main.storyboard */,
+				A677E1411B979444009074A0 /* Options Menu */,
+				A677E14B1B979718009074A0 /* Controllers */,
+				A677E1481B9796E1009074A0 /* Table View Cell */,
+				A677E1581B979869009074A0 /* Support Files */,
+			);
+			path = OptionsMenuDemo;
+			sourceTree = "<group>";
+		};
+		A677E1411B979444009074A0 /* Options Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A677E1421B979466009074A0 /* CAPSOptionsMenu.swift */,
+				A677E1431B979466009074A0 /* CAPSOptionsMenuAction.swift */,
+				A677E1441B979466009074A0 /* CAPSOptionsMenuButton.swift */,
+			);
+			name = "Options Menu";
+			sourceTree = "<group>";
+		};
+		A677E1481B9796E1009074A0 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A677E1501B979745009074A0 /* MenuTableViewCell.swift */,
+				A677E1511B979745009074A0 /* MenuTableViewCell.xib */,
+			);
+			name = "Table View Cell";
+			sourceTree = "<group>";
+		};
+		A677E14B1B979718009074A0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A677E14C1B97972F009074A0 /* MenuTableViewController.swift */,
+				A677E14D1B97972F009074A0 /* MenuTableViewController.xib */,
+				A677E1541B979847009074A0 /* SmallOptionsMenuViewController.swift */,
+				A677E1551B979847009074A0 /* SmallOptionsMenuViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A677E1581B979869009074A0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
 				A677E1361B9793ED009074A0 /* Assets.xcassets */,
 				A677E1381B9793ED009074A0 /* LaunchScreen.storyboard */,
 				A677E13B1B9793ED009074A0 /* Info.plist */,
 			);
-			path = OptionsMenuDemo;
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,8 +177,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A677E14F1B97972F009074A0 /* MenuTableViewController.xib in Resources */,
 				A677E13A1B9793ED009074A0 /* LaunchScreen.storyboard in Resources */,
 				A677E1371B9793ED009074A0 /* Assets.xcassets in Resources */,
+				A677E1531B979745009074A0 /* MenuTableViewCell.xib in Resources */,
+				A677E1571B979847009074A0 /* SmallOptionsMenuViewController.xib in Resources */,
 				A677E1351B9793ED009074A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,7 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A677E1321B9793ED009074A0 /* ViewController.swift in Sources */,
+				A677E1561B979847009074A0 /* SmallOptionsMenuViewController.swift in Sources */,
+				A677E1461B979466009074A0 /* CAPSOptionsMenuAction.swift in Sources */,
+				A677E14E1B97972F009074A0 /* MenuTableViewController.swift in Sources */,
+				A677E1521B979745009074A0 /* MenuTableViewCell.swift in Sources */,
+				A677E1451B979466009074A0 /* CAPSOptionsMenu.swift in Sources */,
+				A677E1471B979466009074A0 /* CAPSOptionsMenuButton.swift in Sources */,
 				A677E1301B9793ED009074A0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +349,7 @@
 				A677E1401B9793ED009074A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

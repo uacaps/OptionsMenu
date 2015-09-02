@@ -35,7 +35,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     private var openedFrame: CGRect = CGRectZero
     
     // Customization options defaults
-    var menuKeepBarButtonOnRightEdge: Bool = true
+    var menuKeepBarButtonAtEdge: Bool = true
     var maxMenuWidth: CGFloat = 200.0
     var hasShadow: Bool = true
     var menuShadowColor: UIColor = UIColor.grayColor()
@@ -54,14 +54,14 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - imageName: Name for menu bar button image
     ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
-    init(viewController: UIViewController, imageName: String, keepBarButtonOnRightEdge: Bool) {
+    init(viewController: UIViewController, imageName: String, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
         super.init(frame: targetNavigationController!.view.frame)
         
         addBarButtonWithImageName(imageName)
         
-        menuKeepBarButtonOnRightEdge = keepBarButtonOnRightEdge
+        menuKeepBarButtonAtEdge = keepBarButtonAtEdge
         setUpOptionsMenu()
     }
     
@@ -71,14 +71,14 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - image: Image for menu bar button
     ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
-    init(viewController: UIViewController, image: UIImage, keepBarButtonOnRightEdge: Bool) {
+    init(viewController: UIViewController, image: UIImage, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
         super.init(frame: targetNavigationController!.view.frame)
         
         addBarButtonWithImage(image)
         
-        menuKeepBarButtonOnRightEdge = keepBarButtonOnRightEdge
+        menuKeepBarButtonAtEdge = keepBarButtonAtEdge
         setUpOptionsMenu()
     }
     
@@ -88,14 +88,14 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - barButtonSystemItem: Bar button system item for menu bar button
     ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
-    init(viewController: UIViewController, barButtonSystemItem: UIBarButtonSystemItem, keepBarButtonOnRightEdge: Bool) {
+    init(viewController: UIViewController, barButtonSystemItem: UIBarButtonSystemItem, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
         super.init(frame: targetNavigationController!.view.frame)
         
         addBarButtonWithSystemItem(barButtonSystemItem)
         
-        menuKeepBarButtonOnRightEdge = keepBarButtonOnRightEdge
+        menuKeepBarButtonAtEdge = keepBarButtonAtEdge
         setUpOptionsMenu()
     }
 
@@ -319,7 +319,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
                 if navigationItem.rightBarButtonItems?.count > 1
                 {
                     let tempBarButtons = navigationItem.rightBarButtonItems
-                    if menuKeepBarButtonOnRightEdge {
+                    if menuKeepBarButtonAtEdge {
                         navigationItem.rightBarButtonItems? = [barItem!] + tempBarButtons!
                     } else {
                         navigationItem.rightBarButtonItems? = tempBarButtons! + [barItem!]
@@ -328,7 +328,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
                 else if navigationItem.rightBarButtonItem != nil
                 {
                     let tempBarButton : UIBarButtonItem = navigationItem.rightBarButtonItem!
-                    if menuKeepBarButtonOnRightEdge {
+                    if menuKeepBarButtonAtEdge {
                         navigationItem.rightBarButtonItems = [barItem!, tempBarButton]
                     } else {
                         navigationItem.rightBarButtonItems = [tempBarButton, barItem!]
@@ -448,6 +448,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         // Animating with option
         switch menuAnimationOption {
         case .Expand:
+            menuScrollView?.alpha = 1.0
             UIView.animateWithDuration(menuAnimationDuration, animations: { () -> Void in
                 self.menuScrollView?.frame = frameAnimatingTo
                 }, completion: { (completed: Bool) -> Void in
