@@ -220,6 +220,7 @@ If you have any ideas for enhancements or find a bug please open up an issue or 
 ## Future Work
 - [ ] Ability to remove actions dynamically
 - [ ] Ability to set the menu to be on left side of the navigation bar
+- [ ] Ability to change action button titles/colors dynamically
 - [ ] Compatibility with iPad multitasking
 
 ## License
