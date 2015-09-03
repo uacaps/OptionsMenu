@@ -100,6 +100,9 @@ If you want to make a lot of changes at once I recommend using the following met
 ///   - actionButtonsHighlightedColor: Background color for the menu action buttons when tapped
 ///   - cornerRadius: Corner radius for the menu
 ///   - animationOption: Animation option for the menu open/close animation style
+///      - .Fade - menu will fade in/out
+///      - .Expand - menu will expand and contract from bar button center
+///      - .None - menu will appear and disappear without animations
 ///   - animationDuration: Animation duration for the menu open/close animation
 func customizeWith(maxMenuWidth maxMenuWidth: CGFloat?, shadow: Bool?, shadowColor: UIColor?, backgroundColor: UIColor?, borderWidth: CGFloat?, borderColor: UIColor?, actionButtonsTitleColor: UIColor?, actionButtonsHighlightedColor: UIColor?, cornerRadius: CGFloat?, animationOption: AnimationOption?, animationDuration: NSTimeInterval?)
 ```
@@ -173,6 +176,9 @@ func menuCornerRadius(radius: CGFloat)
 ```Swift
 /// - parameters:
 ///   - option: Animation option for the menu open/close animation style
+///      - .Fade - menu will fade in/out
+///      - .Expand - menu will expand and contract from bar button center
+///      - .None - menu will appear and disappear without animations
 func menuAnimationOption(option: AnimationOption)
 ```
 
