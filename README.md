@@ -20,9 +20,9 @@ OptionsMenu is a library written in Swift based on the options menu in material 
 * [How to use OptionsMenu](#how-to-use-optionsmenu)
 * [Customization](#customization)
 * [Apps using OptionsMenu](#apps-using-optionsmenu)
+* [Collaboration](#collaboration)
 * [Future Work](#future-work)
 * [License](#license)
-* [Collaboration](#collaboration)
 
 ## Installation
 
