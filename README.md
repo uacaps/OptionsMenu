@@ -72,7 +72,24 @@ optionsMenu.addAction(menuAction1)
 ## Customization
 OptionsMenu is fully customizable and lets you be able to make it fit in with your app's theme. In order to make sure everything updates properly please only use the functions listed below to make customization changes and don't set any properties manually as that won't necessarily reflect the way you would expect it in the OptionsMenu.
 
-
+If you want to make a lot of changes at once I recommend using the following method as it lets you change every customization options possible at once and be able to send in 'nil' for any property that you want to leave as the default value.
+```Swift
+/// This methods lets you customize every customization option in one method call
+///
+/// - parameters:
+///   - width: Maximum width of the menu
+///   - shadow: If `true`, shadow is added to the menu
+///   - shadowColor: Shadow color for the menu
+///   - backgroundColor: Background color for the menu
+///   - borderWidth: Border width for the menu
+///   - borderColor: Border color for the menu
+///   - actionButtonsTitleColor: Title color for the menu action buttons
+///   - actionButtonsHighlightedColor: Background color for the menu action buttons when tapped
+///   - cornerRadius: Corner radius for the menu
+///   - animationOption: Animation option for the menu open/close animation style
+///   - animationDuration: Animation duration for the menu open/close animation
+func customizeWith(maxMenuWidth maxMenuWidth: CGFloat?, shadow: Bool?, shadowColor: UIColor?, backgroundColor: UIColor?, borderWidth: CGFloat?, borderColor: UIColor?, actionButtonsTitleColor: UIColor?, actionButtonsHighlightedColor: UIColor?, cornerRadius: CGFloat?, animationOption: AnimationOption?, animationDuration: NSTimeInterval?)
+```
 
 ## Apps using OptionsMenu
 
