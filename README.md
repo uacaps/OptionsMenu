@@ -55,7 +55,7 @@ let optionsMenu: CAPSOptionsMenu  = CAPSOptionsMenu(viewController: self, barBut
 ```
 (If you want to do further manipulation on the menu later on, don't forget to set it up as a property in the view controller)
 
-Menu Actions can be added easily as shown below. You can add as many actions as you would like. If there is not enough space to show all actions the menu will start to scroll
+Menu Actions can be added easily as shown below. You can add as many actions as you would like. If there is not enough space to show all actions the menu will start to scroll.
 
 ```Swift
 let menuAction1: CAPSOptionsMenuAction = CAPSOptionsMenuAction(title: "Action Title 1") { (action: CAPSOptionsMenuAction) -> Void in
@@ -63,6 +63,9 @@ let menuAction1: CAPSOptionsMenuAction = CAPSOptionsMenuAction(title: "Action Ti
 }
 optionsMenu.addAction(menuAction1)
 ```
+
+## Customization
+OptionsMenu is fully customizable and lets you be able to make it fit in with your app's theme. In order to make sure everything updates properly please only use the functions listed below to make customization changes and don't set any properties manually as that won't necessarily reflect the way you would expect it in the OptionsMenu.
 
 
 
