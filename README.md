@@ -11,6 +11,9 @@ OptionsMenu is a library written in Swift based on the options menu in material 
 * [Installation](#installation)
 * [How to use OptionsMenu](#how-to-use-optionsmenu)
 * [Customization](#customization)
+* [Apps using OptionsMenu](#apps-using-optionsmenu)
+* [Future Work](#future-work)
+* [License](#license)
 
 ## Installation
 
@@ -189,7 +192,7 @@ Please let me know if your app in the AppStore uses this library so I can add yo
 - [ ] Ability to set the menu to be on left side of the navigation bar
 - [ ] Compatibility with iPad multitasking
 
-## License ##
+## License
 
 Copyright (c) 2014 The Board of Trustees of The University of Alabama
 All rights reserved.
