@@ -32,6 +32,11 @@ To install add the following line to your Podfile:
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/uacaps/OptionsMenu)
 
+OptionsMenu is available through [Carthage](https://github.com/carthage/carthage).  Append this line to your Cartfile and follow these [instructions](https://github.com/carthage/carthage#adding-frameworks-to-an-application).
+
+```github "uacaps/OptionsMenu"```
+
+
 **Manual Installation**
 
 The class files required for OptionsMenu are located in the Classes folder in the root of this repository as listed below:
