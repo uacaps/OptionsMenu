@@ -24,6 +24,20 @@ CAPSOptionsMenuAction.swift
 CAPSOptionsMenuButton.swift
 ```
 
+## How to use OptionsMenu
+
+Once installed (See Installation section for more details) you will need a view controller, which is inside of a navigation controller in order to set up the menu. After that it is very easy to set up OptionsMenu from that view controller as shown below.
+
+```Swift
+```
+
+Menu Actions can be added easily as shown below.
+
+```Swift
+```
+
+
+
 ## License ##
 
 Copyright (c) 2014 The Board of Trustees of The University of Alabama
