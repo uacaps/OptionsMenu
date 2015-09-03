@@ -58,7 +58,7 @@ let optionsMenu: CAPSOptionsMenu  = CAPSOptionsMenu(viewController: self, barBut
 Menu Actions can be added easily as shown below. You can add as many actions as you would like. If there is not enough space to show all actions the menu will start to scroll.
 
 ```Swift
-/// Options Action Initializer
+/// Options Action Setup
 ///
 /// - parameters:
 ///   - title: Title to be displayed on action button in menu
