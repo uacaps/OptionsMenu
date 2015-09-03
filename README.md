@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/uacaps/ResourceRepo/master/OptionsMenu/OptionsMenuHeader.png" alt="OptionsMenuHeader">
 
-**Developed by [Niklas Fahl (fahlout)](http://bit.ly/fahlout)**
+**Built for Swift 2.0 and developed by [Niklas Fahl (fahlout)](http://bit.ly/fahlout)**
 
 ## Description
 
