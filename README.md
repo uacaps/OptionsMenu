@@ -1,6 +1,11 @@
 <img src="https://raw.githubusercontent.com/uacaps/ResourceRepo/master/OptionsMenu/OptionsMenuHeader.png" alt="OptionsMenuHeader">
 
-**Built for Swift 2.0 and developed by [Niklas Fahl (fahlout)](http://bit.ly/fahlout)**
+[![Version](https://img.shields.io/cocoapods/v/OptionsMenu.svg?style=flat)](http://cocoapods.org/pods/OptionsMenu)
+[![License](https://img.shields.io/cocoapods/l/OptionsMenu.svg?style=flat)](http://cocoapods.org/pods/OptionsMenu)
+[![Platform](https://img.shields.io/cocoapods/p/OptionsMenu.svg?style=flat)](http://cocoapods.org/pods/OptionsMenu)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/uacaps/OptionsMenu)
+
+**Built for Swift 2.0 and developed by [Niklas Fahl (fahlout)](http://bit.ly/fahlout) - [LinkedIn](http://bit.ly/linked-in-niklas-fahl)**
 
 ## Description
 
@@ -30,7 +35,14 @@ To install add the following line to your Podfile:
 
 **Carthage**
 
-* Coming soon
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/uacaps/OptionsMenu)
+
+OptionsMenu is available through [Carthage](https://github.com/carthage/carthage).  Append this line to your Cartfile and follow these [instructions](https://github.com/carthage/carthage#adding-frameworks-to-an-application).
+
+```
+github "uacaps/OptionsMenu"
+```
+
 
 **Manual Installation**
 
