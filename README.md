@@ -29,7 +29,31 @@ CAPSOptionsMenuButton.swift
 Once installed (See Installation section for more details) you will need a view controller, which is inside of a navigation controller in order to set up the menu. After that it is very easy to set up OptionsMenu from that view controller as shown below.
 
 ```Swift
+/// Initialize with parent view controller and bar button image name
+    ///
+    /// -parameters:
+    ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
+    ///   - imageName: Name for menu bar button image
+    ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
+let optionsMenu: CAPSOptionsMenu  = CAPSOptionsMenu(viewController: self, imageName: "ImageName", keepBarButtonAtEdge: true)
+
+/// Initialize with parent view controller and bar button image
+    ///
+    /// -parameters:
+    ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
+    ///   - image: Image for menu bar button
+    ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
+let optionsMenu: CAPSOptionsMenu  = CAPSOptionsMenu(viewController: self, image: UIImage(), keepBarButtonAtEdge: true)
+
+/// Initialize with parent view controller and bar button system item
+    ///
+    /// -parameters:
+    ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
+    ///   - barButtonSystemItem: Bar button system item for menu bar button
+    ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
+let optionsMenu: CAPSOptionsMenu  = CAPSOptionsMenu(viewController: self, barButtonSystemItem: UIBarButtonSystemItem.Organize, keepBarButtonAtEdge: true)
 ```
+(If you want to do further manipulation on the menu later on, don't forget to set it up as a property in the view controller)
 
 Menu Actions can be added easily as shown below.
 
