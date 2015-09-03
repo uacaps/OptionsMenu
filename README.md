@@ -8,15 +8,21 @@ OptionsMenu is a library written in Swift based on the options menu in material 
 
 **Cocoa Pods**
 
+* Coming soon
+
 **Carthage**
+
+* Coming soon
 
 **Manual Installation**
 
 The class files required for OptionsMenu are located in the Classes folder in the root of this repository as listed below:
 
-* CAPSOptionsMenu.swift
-* CAPSOptionsMenuAction.swift
-* CAPSOptionsMenuButton.swift
+```Swift
+CAPSOptionsMenu.swift
+CAPSOptionsMenuAction.swift
+CAPSOptionsMenuButton.swift
+```
 
 ## License ##
 
