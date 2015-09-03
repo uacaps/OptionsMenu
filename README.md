@@ -72,6 +72,8 @@ optionsMenu.addAction(menuAction1)
 ## Customization
 OptionsMenu is fully customizable and lets you be able to make it fit in with your app's theme. In order to make sure everything updates properly please only use the functions listed below to make customization changes and don't set any properties manually as that won't necessarily reflect the way you would expect it in the OptionsMenu.
 
+**Customize everything at once**
+
 If you want to make a lot of changes at once I recommend using the following method as it lets you change every customization options possible at once and be able to send in 'nil' for any property that you want to leave as the default value.
 ```Swift
 /// This methods lets you customize every customization option in one method call
@@ -90,6 +92,63 @@ If you want to make a lot of changes at once I recommend using the following met
 ///   - animationDuration: Animation duration for the menu open/close animation
 func customizeWith(maxMenuWidth maxMenuWidth: CGFloat?, shadow: Bool?, shadowColor: UIColor?, backgroundColor: UIColor?, borderWidth: CGFloat?, borderColor: UIColor?, actionButtonsTitleColor: UIColor?, actionButtonsHighlightedColor: UIColor?, cornerRadius: CGFloat?, animationOption: AnimationOption?, animationDuration: NSTimeInterval?)
 ```
+
+**Customize individual options**
+
+/// Menu Max Width
+/// - parameters:
+///   - width: Maximum width of the menu
+func menuMaxWidth(width: CGFloat)
+    
+/// Menu Has Shadow
+/// - parameters:
+///   - shadow: If `true`, shadow is added to the menu
+func menuHasShadow(shadow: Bool)
+    
+/// Menu Shadow Color
+/// - parameters:
+///   - color: Shadow color for the menu
+func menuShadowColor(color: UIColor)
+    
+/// Menu Background Color
+/// - parameters:
+///   - color: Background color for the menu
+func menuBackgroundColor(color: UIColor)
+    
+/// Menu Border Width
+/// - parameters:
+///   - width: Border width for the menu
+func menuBorderWidth(width: CGFloat)
+    
+/// Menu Border Color
+/// - parameters:
+///   - color: Border color for the menu
+func menuBorderColor(color: UIColor)
+    
+/// Menu Action Buttons Title Color
+/// - parameters:
+///   - color: Title color for the menu action buttons
+func menuActionButtonsTitleColor(color: UIColor)
+    
+/// Menu Action Buttons Highlighted Color
+/// - parameters:
+///   - color: Background color for the menu action buttons when tapped
+func menuActionButtonsHighlightedColor(color: UIColor)
+    
+/// Menu Corner Radius
+/// - parameters:
+///   - radius: Corner radius for the menu
+func menuCornerRadius(radius: CGFloat)
+    
+/// Menu Animation Option
+/// - parameters:
+///   - option: Animation option for the menu open/close animation style
+func menuAnimationOption(option: AnimationOption)
+    
+/// Menu Animation Duration
+/// - parameters:
+///   - duration: Animation duration for the menu open/close animation
+func menuAnimationDuration(duration: NSTimeInterval)
 
 ## Apps using OptionsMenu
 
