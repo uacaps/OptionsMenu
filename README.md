@@ -69,6 +69,15 @@ OptionsMenu is fully customizable and lets you be able to make it fit in with yo
 
 
 
+## Apps using OptionsMenu
+
+Please let me know if your app in the AppStore uses this library so I can add your app to this list.
+
+## Future Work
+- [ ] Ability to remove actions dynamically
+- [ ] Ability to set the menu to be on left side of the navigation bar
+- [ ] Compatibility with iPad multitasking
+
 ## License ##
 
 Copyright (c) 2014 The Board of Trustees of The University of Alabama
