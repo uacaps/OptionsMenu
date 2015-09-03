@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/OptionsMenu.svg?style=flat)](http://cocoapods.org/pods/OptionsMenu)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/uacaps/OptionsMenu)
 
-**Built for Swift 2.0 and developed by [Niklas Fahl (fahlout)](http://bit.ly/fahlout)**
+**Built for Swift 2.0 and developed by [Niklas Fahl (fahlout)](http://bit.ly/fahlout) - [LinkedIn](http://bit.ly/linked-in-niklas-fahl)**
 
 ## Description
 
