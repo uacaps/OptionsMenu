@@ -1,5 +1,10 @@
 <img src="https://raw.githubusercontent.com/uacaps/ResourceRepo/master/OptionsMenu/OptionsMenuHeader.png" alt="OptionsMenuHeader">
 
+[![Version](https://img.shields.io/cocoapods/v/OptionsMenu.svg?style=flat)](http://cocoapods.org/pods/OptionsMenu)
+[![License](https://img.shields.io/cocoapods/l/OptionsMenu.svg?style=flat)](http://cocoapods.org/pods/OptionsMenu)
+[![Platform](https://img.shields.io/cocoapods/p/OptionsMenu.svg?style=flat)](http://cocoapods.org/pods/OptionsMenu)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/uacaps/OptionsMenu)
+
 **Built for Swift 2.0 and developed by [Niklas Fahl (fahlout)](http://bit.ly/fahlout)**
 
 ## Description
