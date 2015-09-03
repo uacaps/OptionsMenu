@@ -34,7 +34,7 @@ Once installed (See Installation section for more details) you will need a view 
 /// -parameters:
 ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
 ///   - imageName: Name for menu bar button image
-///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
+///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
 let optionsMenu: CAPSOptionsMenu  = CAPSOptionsMenu(viewController: self, imageName: "ImageName", keepBarButtonAtEdge: true)
 
 /// Initialize with parent view controller and bar button image
@@ -42,7 +42,7 @@ let optionsMenu: CAPSOptionsMenu  = CAPSOptionsMenu(viewController: self, imageN
 /// -parameters:
 ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
 ///   - image: Image for menu bar button
-///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
+///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
 let optionsMenu: CAPSOptionsMenu  = CAPSOptionsMenu(viewController: self, image: UIImage(), keepBarButtonAtEdge: true)
 
 /// Initialize with parent view controller and bar button system item
@@ -50,7 +50,7 @@ let optionsMenu: CAPSOptionsMenu  = CAPSOptionsMenu(viewController: self, image:
 /// -parameters:
 ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
 ///   - barButtonSystemItem: Bar button system item for menu bar button
-///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
+///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
 let optionsMenu: CAPSOptionsMenu  = CAPSOptionsMenu(viewController: self, barButtonSystemItem: UIBarButtonSystemItem.Organize, keepBarButtonAtEdge: true)
 ```
 (If you want to do further manipulation on the menu later on, don't forget to set it up as a property in the view controller)
