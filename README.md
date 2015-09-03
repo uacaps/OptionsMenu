@@ -34,7 +34,9 @@ To install add the following line to your Podfile:
 
 OptionsMenu is available through [Carthage](https://github.com/carthage/carthage).  Append this line to your Cartfile and follow these [instructions](https://github.com/carthage/carthage#adding-frameworks-to-an-application).
 
-```github "uacaps/OptionsMenu"```
+```
+github "uacaps/OptionsMenu"
+```
 
 
 **Manual Installation**
