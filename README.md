@@ -1,6 +1,22 @@
 <img src="https://raw.githubusercontent.com/uacaps/ResourceRepo/master/OptionsMenu/OptionsMenuHeader.png" alt="OptionsMenuHeader">
 
-- Documentation coming very soon!!
+## Description
+
+OptionsMenu is a library written in Swift based on the options menu in material design in Android that allows you to easily add a menu to the navigation bar by adding a bar button item to the right side of the navigation bar, which then lets you open and close the menu. OptionsMenu is a popover style menu, which is set up as easy as a UIAlertController with every added action corresponding to a button in the menu. Actions are easily handled with a completion handler.
+
+## Installation
+
+**Cocoa Pods**
+
+**Carthage**
+
+**Manual Installation**
+
+The class files required for OptionsMenu are located in the Classes folder in the root of this repository as listed below:
+
+* CAPSOptionsMenu.swift
+* CAPSOptionsMenuAction.swift
+* CAPSOptionsMenuButton.swift
 
 ## License ##
 
