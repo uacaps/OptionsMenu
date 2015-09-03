@@ -22,7 +22,11 @@ OptionsMenu is a library written in Swift based on the options menu in material 
 
 **Cocoa Pods**
 
-* Coming soon
+OptionsMenu is available through [CocoaPods](http://cocoapods.org).
+
+To install add the following line to your Podfile:
+
+    pod 'OptionsMenu'
 
 **Carthage**
 
