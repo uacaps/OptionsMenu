@@ -22,6 +22,7 @@ OptionsMenu is a library written in Swift based on the options menu in material 
 * [Apps using OptionsMenu](#apps-using-optionsmenu)
 * [Future Work](#future-work)
 * [License](#license)
+* [Collaboration](#collaboration)
 
 ## Installation
 
@@ -211,6 +212,10 @@ func menuAnimationDuration(duration: NSTimeInterval)
 ## Apps using OptionsMenu
 
 Please let me know if your app in the AppStore uses this library so I can add your app to this list.
+
+## Collaboration
+
+If you have any ideas for enhancements or find a bug please open up an issue or fork this repository and make a pull request. I will link anybody who makes a contribution below.
 
 ## Future Work
 - [ ] Ability to remove actions dynamically
