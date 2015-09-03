@@ -12,6 +12,7 @@ import UIKit
 enum AnimationOption {
     case Fade
     case Expand
+    case None
 }
 
 class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
@@ -53,7 +54,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// -parameters:
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - imageName: Name for menu bar button image
-    ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
+    ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
     init(viewController: UIViewController, imageName: String, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
@@ -70,7 +71,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// -parameters:
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - image: Image for menu bar button
-    ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
+    ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
     init(viewController: UIViewController, image: UIImage, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
@@ -87,7 +88,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// -parameters:
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - barButtonSystemItem: Bar button system item for menu bar button
-    ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the right
+    ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
     init(viewController: UIViewController, barButtonSystemItem: UIBarButtonSystemItem, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
@@ -471,6 +472,20 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
                 }, completion: { (completed: Bool) -> Void in
                     if completion != nil { completion!() }
             })
+        case .None:
+            self.menuScrollView?.frame = self.openedFrame
+            if isShown {
+                menuScrollView?.alpha = 0.0
+                menuScrollView?.layer.shadowOpacity = 0.0
+            }
+            if self.isShown { // Open
+                self.menuScrollView?.alpha = 1.0
+                if self.hasShadow { self.menuScrollView?.layer.shadowOpacity = 1.0 }
+            } else { // Close
+                self.menuScrollView?.alpha = 0.0
+                if self.hasShadow { self.menuScrollView?.layer.shadowOpacity = 0.0 }
+            }
+            if completion != nil { completion!() }
         }
     }
     

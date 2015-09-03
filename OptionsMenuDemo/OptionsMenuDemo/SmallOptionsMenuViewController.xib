@@ -2,10 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmallOptionsMenuViewController" customModule="OptionsMenuDemo" customModuleProvider="target">
             <connections>
+                <outlet property="durationSegmentedControl" destination="Wg2-Qs-Poi" id="uzB-AE-t9E"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,6 +21,7 @@
                     <segments>
                         <segment title="Expand Animation"/>
                         <segment title="Fade Animation"/>
+                        <segment title="No Animation"/>
                     </segments>
                     <color key="tintColor" red="0.18871212009999999" green="0.22811651229999999" blue="0.65021044019999996" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
@@ -26,7 +29,7 @@
                     </connections>
                 </segmentedControl>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wg2-Qs-Poi">
-                    <rect key="frame" x="20" y="68" width="560" height="29"/>
+                    <rect key="frame" x="20" y="68" width="373" height="29"/>
                     <segments>
                         <segment title="0.2sec duration"/>
                         <segment title="0.0sec duration"/>
@@ -41,7 +44,7 @@
             <constraints>
                 <constraint firstItem="a6H-BW-iYv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="04u-j8-wTe"/>
                 <constraint firstItem="a6H-BW-iYv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="E7L-ol-NrX"/>
-                <constraint firstAttribute="trailing" secondItem="Wg2-Qs-Poi" secondAttribute="trailing" constant="20" id="NEi-re-lqi"/>
+                <constraint firstItem="Wg2-Qs-Poi" firstAttribute="width" secondItem="a6H-BW-iYv" secondAttribute="width" multiplier="2/3" id="IfK-Qe-Fs2"/>
                 <constraint firstAttribute="trailing" secondItem="a6H-BW-iYv" secondAttribute="trailing" constant="20" id="O3l-Gt-3a4"/>
                 <constraint firstItem="Wg2-Qs-Poi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Uvi-SH-thM"/>
                 <constraint firstItem="Wg2-Qs-Poi" firstAttribute="top" secondItem="a6H-BW-iYv" secondAttribute="bottom" constant="20" id="Xcl-wY-AKJ"/>

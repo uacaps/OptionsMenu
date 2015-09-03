@@ -12,6 +12,8 @@ class SmallOptionsMenuViewController: UIViewController {
 
     var optionsMenu: CAPSOptionsMenu?
     
+    @IBOutlet weak var durationSegmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,9 +51,14 @@ class SmallOptionsMenuViewController: UIViewController {
     
     @IBAction func animationSegmentedControlChangedValue(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
+            durationSegmentedControl.hidden = false
             optionsMenu?.menuAnimationOption(AnimationOption.Expand)
-        } else {
+        } else if sender.selectedSegmentIndex == 1 {
+            durationSegmentedControl.hidden = false
             optionsMenu?.menuAnimationOption(AnimationOption.Fade)
+        } else {
+            durationSegmentedControl.hidden = true
+            optionsMenu?.menuAnimationOption(AnimationOption.None)
         }
     }
     
