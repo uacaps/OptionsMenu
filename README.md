@@ -95,60 +95,82 @@ func customizeWith(maxMenuWidth maxMenuWidth: CGFloat?, shadow: Bool?, shadowCol
 
 **Customize individual options**
 
+```Swift
 /// Menu Max Width
 /// - parameters:
 ///   - width: Maximum width of the menu
 func menuMaxWidth(width: CGFloat)
-    
+```    
+
+```Swift
 /// Menu Has Shadow
 /// - parameters:
 ///   - shadow: If `true`, shadow is added to the menu
 func menuHasShadow(shadow: Bool)
-    
+```
+
+```Swift
 /// Menu Shadow Color
 /// - parameters:
 ///   - color: Shadow color for the menu
 func menuShadowColor(color: UIColor)
-    
+```
+
+```Swift
 /// Menu Background Color
 /// - parameters:
 ///   - color: Background color for the menu
 func menuBackgroundColor(color: UIColor)
-    
+```
+
+```Swift
 /// Menu Border Width
 /// - parameters:
 ///   - width: Border width for the menu
 func menuBorderWidth(width: CGFloat)
-    
+```
+
+```Swift
 /// Menu Border Color
 /// - parameters:
 ///   - color: Border color for the menu
 func menuBorderColor(color: UIColor)
-    
+```
+
+```Swift
 /// Menu Action Buttons Title Color
 /// - parameters:
 ///   - color: Title color for the menu action buttons
 func menuActionButtonsTitleColor(color: UIColor)
-    
+```
+
+```Swift
 /// Menu Action Buttons Highlighted Color
 /// - parameters:
 ///   - color: Background color for the menu action buttons when tapped
 func menuActionButtonsHighlightedColor(color: UIColor)
-    
+```
+
+```Swift
 /// Menu Corner Radius
 /// - parameters:
 ///   - radius: Corner radius for the menu
 func menuCornerRadius(radius: CGFloat)
-    
+```
+
+```Swift
 /// Menu Animation Option
 /// - parameters:
 ///   - option: Animation option for the menu open/close animation style
 func menuAnimationOption(option: AnimationOption)
-    
-/// Menu Animation Duration
+```
+
+* Menu Animation Duration
+```Swift
 /// - parameters:
 ///   - duration: Animation duration for the menu open/close animation
 func menuAnimationDuration(duration: NSTimeInterval)
+```
 
 ## Apps using OptionsMenu
 
