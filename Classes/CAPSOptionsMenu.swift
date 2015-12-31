@@ -120,7 +120,8 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         menuScrollView = UIScrollView(frame: closedFrame)
         menuScrollView?.backgroundColor = menuBackgroundColor
         menuScrollView?.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
-        self.addSubview(menuScrollView!)
+        //self.addSubview(menuScrollView!)
+        self.window?.addSubview(menuScrollView!)//add on UIWindow avoid navigation bar covered on menu view
         
         let backgroundTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "toggleMenu")
         backgroundTapGesture.delegate = self
