@@ -55,7 +55,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - imageName: Name for menu bar button image
     ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
-    init(viewController: UIViewController, imageName: String, keepBarButtonAtEdge: Bool) {
+    public init(viewController: UIViewController, imageName: String, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
         super.init(frame: targetNavigationController!.view.frame)
@@ -72,7 +72,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - image: Image for menu bar button
     ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
-    init(viewController: UIViewController, image: UIImage, keepBarButtonAtEdge: Bool) {
+    public init(viewController: UIViewController, image: UIImage, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
         super.init(frame: targetNavigationController!.view.frame)
@@ -89,7 +89,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - barButtonSystemItem: Bar button system item for menu bar button
     ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
-    init(viewController: UIViewController, barButtonSystemItem: UIBarButtonSystemItem, keepBarButtonAtEdge: Bool) {
+    public init(viewController: UIViewController, barButtonSystemItem: UIBarButtonSystemItem, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
         super.init(frame: targetNavigationController!.view.frame)
