@@ -11,6 +11,7 @@ import UIKit
 public class CAPSOptionsMenuAction: NSObject {
     var title: String = ""
     var actionHandler: ((CAPSOptionsMenuAction) -> Void)
+    var image: UIImage?
     
     /// Options Action Initializer
     ///
@@ -23,4 +24,11 @@ public class CAPSOptionsMenuAction: NSObject {
     
         self.title = title
     }
+    
+    
+    public convenience init(title: String, image: UIImage?, handler: ((CAPSOptionsMenuAction) -> Void) ) {
+        self.init(title: title, handler: handler)
+        self.image = image
+    }
+    
 }

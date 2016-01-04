@@ -314,6 +314,9 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         addItemToNavigationBar()
     }
     
+    
+    
+    
     private func addItemToNavigationBar() {
         if barItem != nil {
             if let navigationItem = parentViewController?.navigationItem {
@@ -507,6 +510,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         actionButton.titleLabel?.font = UIFont.systemFontOfSize(14.0)
         actionButton.tag = actions.count - 1
         actionButton.setTitle(action.title, forState: UIControlState.Normal)
+        actionButton.setImage(action.image, forState: .Normal)
         actionButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left;
         actionButton.contentEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
         actionButton.setTitleColor(menuActionButtonsTitleColor, forState: UIControlState.Normal)
