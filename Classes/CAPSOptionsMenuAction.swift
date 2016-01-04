@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CAPSOptionsMenuAction: NSObject {
+public class CAPSOptionsMenuAction: NSObject {
     var title: String = ""
     var actionHandler: ((CAPSOptionsMenuAction) -> Void)
     
