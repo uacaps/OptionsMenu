@@ -30,7 +30,13 @@ class SmallOptionsMenuViewController: UIViewController {
 
     func addOptionsMenu() {
         
-        optionsMenu = CAPSOptionsMenu(viewController: self, barButtonSystemItem: .Organize, keepBarButtonAtEdge: true)
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Organize, target: nil, action: "null")
+        self.navigationItem.rightBarButtonItem = addButton
+        
+        
+        optionsMenu = CAPSOptionsMenu(viewController: self, barButtonItem: addButton, keepBarButtonAtEdge: true)
+        
+        // optionsMenu = CAPSOptionsMenu(viewController: self, barButtonSystemItem: .Organize, keepBarButtonAtEdge: true)
         
         optionsMenu?.menuActionButtonsHighlightedColor(UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0))
         optionsMenu?.menuCornerRadius(2.0)

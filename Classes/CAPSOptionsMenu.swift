@@ -99,6 +99,21 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         menuKeepBarButtonAtEdge = keepBarButtonAtEdge
         setUpOptionsMenu()
     }
+    
+    
+    public init(viewController: UIViewController, barButtonItem: UIBarButtonItem, keepBarButtonAtEdge: Bool) {
+        parentViewController = viewController
+        targetNavigationController = viewController.navigationController
+        super.init(frame: targetNavigationController!.view.frame)
+        
+        barItem = barButtonItem
+        barItem?.target = self
+        barItem?.action = "barButtonAction:event:"
+        // addItemToNavigationBar()
+        
+        menuKeepBarButtonAtEdge = keepBarButtonAtEdge
+        setUpOptionsMenu()
+    }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
