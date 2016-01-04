@@ -9,13 +9,13 @@
 
 import UIKit
 
-enum AnimationOption {
+public enum AnimationOption {
     case Fade
     case Expand
     case None
 }
 
-class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
+public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     private var parentViewController: UIViewController?
     private var targetNavigationController: UINavigationController?
     
@@ -100,7 +100,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         setUpOptionsMenu()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -527,7 +527,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     }
     
     // MARK: - Gesture Recognizer Delegate
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+    public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
         if touch.view == menuScrollView {
             return false
         }
@@ -536,7 +536,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     }
     
     // MARK: - Screen Rotation Handling in layout subviews
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         if isShown {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CAPSOptionsMenuButton: UIButton {
+public class CAPSOptionsMenuButton: UIButton {
     var optionsMenuButtonBackgroundColor: UIColor = UIColor.whiteColor()
     var optionsMenuButtonHighlightedColor: UIColor = UIColor.lightGrayColor()
     
@@ -37,22 +37,22 @@ class CAPSOptionsMenuButton: UIButton {
         self.backgroundColor = optionsMenuButtonBackgroundColor
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     // MARK: - Tap handling
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         touchDown()
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesEnded(touches, withEvent: event)
         touchUp()
     }
     
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+    override public func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
         super.touchesCancelled(touches, withEvent: event)
         touchUp()
     }
