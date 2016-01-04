@@ -168,7 +168,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - cornerRadius: Corner radius for the menu
     ///   - animationOption: Animation option for the menu open/close animation style
     ///   - animationDuration: Animation duration for the menu open/close animation
-    func customizeWith(maxMenuWidth maxMenuWidth: CGFloat?, shadow: Bool?, shadowColor: UIColor?, backgroundColor: UIColor?, borderWidth: CGFloat?, borderColor: UIColor?, actionButtonsTitleColor: UIColor?, actionButtonsHighlightedColor: UIColor?, cornerRadius: CGFloat?, animationOption: AnimationOption?, animationDuration: NSTimeInterval?) {
+    public func customizeWith(maxMenuWidth maxMenuWidth: CGFloat?, shadow: Bool?, shadowColor: UIColor?, backgroundColor: UIColor?, borderWidth: CGFloat?, borderColor: UIColor?, actionButtonsTitleColor: UIColor?, actionButtonsHighlightedColor: UIColor?, cornerRadius: CGFloat?, animationOption: AnimationOption?, animationDuration: NSTimeInterval?) {
         if let mMenuWidth = maxMenuWidth { self.maxMenuWidth = mMenuWidth }
         if let sh = shadow { hasShadow = sh }
         if let shColor = shadowColor { menuShadowColor = shColor }
@@ -208,14 +208,14 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Max Width
     /// - parameters:
     ///   - width: Maximum width of the menu
-    func menuMaxWidth(width: CGFloat) {
+    public func menuMaxWidth(width: CGFloat) {
         maxMenuWidth = width
     }
     
     /// Menu Has Shadow
     /// - parameters:
     ///   - shadow: If `true`, shadow is added to the menu
-    func menuHasShadow(shadow: Bool) {
+    public func menuHasShadow(shadow: Bool) {
         hasShadow = shadow
         
         if hasShadow {
@@ -230,7 +230,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Shadow Color
     /// - parameters:
     ///   - color: Shadow color for the menu
-    func menuShadowColor(color: UIColor) {
+    public func menuShadowColor(color: UIColor) {
         menuShadowColor = color
         self.layer.shadowColor = menuShadowColor.CGColor
     }
@@ -238,7 +238,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Background Color
     /// - parameters:
     ///   - color: Background color for the menu
-    func menuBackgroundColor(color: UIColor) {
+    public func menuBackgroundColor(color: UIColor) {
         menuBackgroundColor = color
         menuScrollView?.backgroundColor = menuBackgroundColor
     }
@@ -246,7 +246,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Border Width
     /// - parameters:
     ///   - width: Border width for the menu
-    func menuBorderWidth(width: CGFloat) {
+    public func menuBorderWidth(width: CGFloat) {
         menuBorderWidth = width
         if menuBorderWidth > 0.0 { addBorderToMenuView() }
     }
@@ -254,7 +254,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Border Color
     /// - parameters:
     ///   - color: Border color for the menu
-    func menuBorderColor(color: UIColor) {
+    public func menuBorderColor(color: UIColor) {
         menuBorderColor = color
         if menuBorderWidth > 0.0 { addBorderToMenuView() }
     }
@@ -262,21 +262,21 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Action Buttons Title Color
     /// - parameters:
     ///   - color: Title color for the menu action buttons
-    func menuActionButtonsTitleColor(color: UIColor) {
+    public func menuActionButtonsTitleColor(color: UIColor) {
         menuActionButtonsTitleColor = color
     }
     
     /// Menu Action Buttons Highlighted Color
     /// - parameters:
     ///   - color: Background color for the menu action buttons when tapped
-    func menuActionButtonsHighlightedColor(color: UIColor) {
+    public func menuActionButtonsHighlightedColor(color: UIColor) {
         menuActionButtonsHiglightedColor = color
     }
     
     /// Menu Corner Radius
     /// - parameters:
     ///   - radius: Corner radius for the menu
-    func menuCornerRadius(radius: CGFloat) {
+    public func menuCornerRadius(radius: CGFloat) {
         menuCornerRadius = radius
         if menuCornerRadius > 0.0 {
             menuScrollView!.layer.cornerRadius = menuCornerRadius
@@ -287,14 +287,14 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Animation Option
     /// - parameters:
     ///   - option: Animation option for the menu open/close animation style
-    func menuAnimationOption(option: AnimationOption) {
+    public func menuAnimationOption(option: AnimationOption) {
         menuAnimationOption = option
     }
     
     /// Menu Animation Duration
     /// - parameters:
     ///   - duration: Animation duration for the menu open/close animation
-    func menuAnimationDuration(duration: NSTimeInterval) {
+    public func menuAnimationDuration(duration: NSTimeInterval) {
         menuAnimationDuration = duration
     }
     
@@ -400,7 +400,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     }
     
     // MARK: - Menu Functions
-    func barButtonAction(sender:UIBarButtonItem, event: UIEvent) {
+    public func barButtonAction(sender:UIBarButtonItem, event: UIEvent) {
         if let touches = event.allTouches() {
             if let touch = touches.first {
                 if let view = touch.view {
@@ -419,7 +419,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         }
     }
     
-    func toggleMenu() {
+    public func toggleMenu() {
         isShown = !isShown
         
         if !isShown {
@@ -490,7 +490,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     }
     
     // MARK: - Action
-    func addAction(action: CAPSOptionsMenuAction) {
+    public func addAction(action: CAPSOptionsMenuAction) {
         actions.append(action)
         addButtonForAction(action)
         
@@ -515,7 +515,7 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         actionButtons.append(actionButton)
     }
     
-    func buttonAction(sender: UIButton) {
+    public func buttonAction(sender: UIButton) {
         if !didTapActionButton {
             self.didTapActionButton = true
             let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.15 * Double(NSEC_PER_SEC)))

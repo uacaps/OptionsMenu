@@ -28,7 +28,7 @@ public class CAPSOptionsMenuButton: UIButton {
     ///   - frame: Initial frame of menu button
     ///   - backgroundColor: Menu button background color
     ///   - highlightedColor: Menu button color for highlighted state
-    init(frame: CGRect, backgroundColor: UIColor?, highlightedColor: UIColor?) {
+    public init(frame: CGRect, backgroundColor: UIColor?, highlightedColor: UIColor?) {
         super.init(frame: frame)
         
         if let bgColor = backgroundColor { optionsMenuButtonBackgroundColor = bgColor }
