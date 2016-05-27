@@ -9,13 +9,13 @@
 
 import UIKit
 
-enum AnimationOption {
+public enum AnimationOption {
     case Fade
     case Expand
     case None
 }
 
-class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
+public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     private var parentViewController: UIViewController?
     private var targetNavigationController: UINavigationController?
     
@@ -55,7 +55,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - imageName: Name for menu bar button image
     ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
-    init(viewController: UIViewController, imageName: String, keepBarButtonAtEdge: Bool) {
+    public init(viewController: UIViewController, imageName: String, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
         super.init(frame: targetNavigationController!.view.frame)
@@ -72,7 +72,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - image: Image for menu bar button
     ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
-    init(viewController: UIViewController, image: UIImage, keepBarButtonAtEdge: Bool) {
+    public init(viewController: UIViewController, image: UIImage, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
         super.init(frame: targetNavigationController!.view.frame)
@@ -89,7 +89,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - viewController: View controller holding the navigation controller with the navigation bar the menu is to be put on
     ///   - barButtonSystemItem: Bar button system item for menu bar button
     ///   - keepBarButtonOnRightEdge: If `true`, menu bar button will always stay on the rightmost position
-    init(viewController: UIViewController, barButtonSystemItem: UIBarButtonSystemItem, keepBarButtonAtEdge: Bool) {
+    public init(viewController: UIViewController, barButtonSystemItem: UIBarButtonSystemItem, keepBarButtonAtEdge: Bool) {
         parentViewController = viewController
         targetNavigationController = viewController.navigationController
         super.init(frame: targetNavigationController!.view.frame)
@@ -99,8 +99,23 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         menuKeepBarButtonAtEdge = keepBarButtonAtEdge
         setUpOptionsMenu()
     }
+    
+    
+    public init(viewController: UIViewController, barButtonItem: UIBarButtonItem, keepBarButtonAtEdge: Bool) {
+        parentViewController = viewController
+        targetNavigationController = viewController.navigationController
+        super.init(frame: targetNavigationController!.view.frame)
+        
+        barItem = barButtonItem
+        barItem?.target = self
+        barItem?.action = "barButtonAction:event:"
+        // addItemToNavigationBar()
+        
+        menuKeepBarButtonAtEdge = keepBarButtonAtEdge
+        setUpOptionsMenu()
+    }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -168,7 +183,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - cornerRadius: Corner radius for the menu
     ///   - animationOption: Animation option for the menu open/close animation style
     ///   - animationDuration: Animation duration for the menu open/close animation
-    func customizeWith(maxMenuWidth maxMenuWidth: CGFloat?, shadow: Bool?, shadowColor: UIColor?, backgroundColor: UIColor?, borderWidth: CGFloat?, borderColor: UIColor?, actionButtonsTitleColor: UIColor?, actionButtonsHighlightedColor: UIColor?, cornerRadius: CGFloat?, animationOption: AnimationOption?, animationDuration: NSTimeInterval?) {
+    public func customizeWith(maxMenuWidth maxMenuWidth: CGFloat?, shadow: Bool?, shadowColor: UIColor?, backgroundColor: UIColor?, borderWidth: CGFloat?, borderColor: UIColor?, actionButtonsTitleColor: UIColor?, actionButtonsHighlightedColor: UIColor?, cornerRadius: CGFloat?, animationOption: AnimationOption?, animationDuration: NSTimeInterval?) {
         if let mMenuWidth = maxMenuWidth { self.maxMenuWidth = mMenuWidth }
         if let sh = shadow { hasShadow = sh }
         if let shColor = shadowColor { menuShadowColor = shColor }
@@ -208,14 +223,14 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Max Width
     /// - parameters:
     ///   - width: Maximum width of the menu
-    func menuMaxWidth(width: CGFloat) {
+    public func menuMaxWidth(width: CGFloat) {
         maxMenuWidth = width
     }
     
     /// Menu Has Shadow
     /// - parameters:
     ///   - shadow: If `true`, shadow is added to the menu
-    func menuHasShadow(shadow: Bool) {
+    public func menuHasShadow(shadow: Bool) {
         hasShadow = shadow
         
         if hasShadow {
@@ -230,7 +245,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Shadow Color
     /// - parameters:
     ///   - color: Shadow color for the menu
-    func menuShadowColor(color: UIColor) {
+    public func menuShadowColor(color: UIColor) {
         menuShadowColor = color
         self.layer.shadowColor = menuShadowColor.CGColor
     }
@@ -238,7 +253,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Background Color
     /// - parameters:
     ///   - color: Background color for the menu
-    func menuBackgroundColor(color: UIColor) {
+    public func menuBackgroundColor(color: UIColor) {
         menuBackgroundColor = color
         menuScrollView?.backgroundColor = menuBackgroundColor
     }
@@ -246,7 +261,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Border Width
     /// - parameters:
     ///   - width: Border width for the menu
-    func menuBorderWidth(width: CGFloat) {
+    public func menuBorderWidth(width: CGFloat) {
         menuBorderWidth = width
         if menuBorderWidth > 0.0 { addBorderToMenuView() }
     }
@@ -254,7 +269,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Border Color
     /// - parameters:
     ///   - color: Border color for the menu
-    func menuBorderColor(color: UIColor) {
+    public func menuBorderColor(color: UIColor) {
         menuBorderColor = color
         if menuBorderWidth > 0.0 { addBorderToMenuView() }
     }
@@ -262,21 +277,21 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Action Buttons Title Color
     /// - parameters:
     ///   - color: Title color for the menu action buttons
-    func menuActionButtonsTitleColor(color: UIColor) {
+    public func menuActionButtonsTitleColor(color: UIColor) {
         menuActionButtonsTitleColor = color
     }
     
     /// Menu Action Buttons Highlighted Color
     /// - parameters:
     ///   - color: Background color for the menu action buttons when tapped
-    func menuActionButtonsHighlightedColor(color: UIColor) {
+    public func menuActionButtonsHighlightedColor(color: UIColor) {
         menuActionButtonsHiglightedColor = color
     }
     
     /// Menu Corner Radius
     /// - parameters:
     ///   - radius: Corner radius for the menu
-    func menuCornerRadius(radius: CGFloat) {
+    public func menuCornerRadius(radius: CGFloat) {
         menuCornerRadius = radius
         if menuCornerRadius > 0.0 {
             menuScrollView!.layer.cornerRadius = menuCornerRadius
@@ -287,14 +302,14 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     /// Menu Animation Option
     /// - parameters:
     ///   - option: Animation option for the menu open/close animation style
-    func menuAnimationOption(option: AnimationOption) {
+    public func menuAnimationOption(option: AnimationOption) {
         menuAnimationOption = option
     }
     
     /// Menu Animation Duration
     /// - parameters:
     ///   - duration: Animation duration for the menu open/close animation
-    func menuAnimationDuration(duration: NSTimeInterval) {
+    public func menuAnimationDuration(duration: NSTimeInterval) {
         menuAnimationDuration = duration
     }
     
@@ -313,6 +328,9 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         barItem = UIBarButtonItem(barButtonSystemItem: systemItem, target: self, action: "barButtonAction:event:")
         addItemToNavigationBar()
     }
+    
+    
+    
     
     private func addItemToNavigationBar() {
         if barItem != nil {
@@ -400,7 +418,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     }
     
     // MARK: - Menu Functions
-    func barButtonAction(sender:UIBarButtonItem, event: UIEvent) {
+    public func barButtonAction(sender:UIBarButtonItem, event: UIEvent) {
         if let touches = event.allTouches() {
             if let touch = touches.first {
                 if let view = touch.view {
@@ -419,7 +437,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         }
     }
     
-    func toggleMenu() {
+    public func toggleMenu() {
         isShown = !isShown
         
         if !isShown {
@@ -490,7 +508,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     }
     
     // MARK: - Action
-    func addAction(action: CAPSOptionsMenuAction) {
+    public func addAction(action: CAPSOptionsMenuAction) {
         actions.append(action)
         addButtonForAction(action)
         
@@ -507,6 +525,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         actionButton.titleLabel?.font = UIFont.systemFontOfSize(14.0)
         actionButton.tag = actions.count - 1
         actionButton.setTitle(action.title, forState: UIControlState.Normal)
+        actionButton.setImage(action.image, forState: .Normal)
         actionButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left;
         actionButton.contentEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
         actionButton.setTitleColor(menuActionButtonsTitleColor, forState: UIControlState.Normal)
@@ -515,7 +534,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
         actionButtons.append(actionButton)
     }
     
-    func buttonAction(sender: UIButton) {
+    public func buttonAction(sender: UIButton) {
         if !didTapActionButton {
             self.didTapActionButton = true
             let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.15 * Double(NSEC_PER_SEC)))
@@ -527,7 +546,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     }
     
     // MARK: - Gesture Recognizer Delegate
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+    public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
         if touch.view == menuScrollView {
             return false
         }
@@ -536,7 +555,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     }
     
     // MARK: - Screen Rotation Handling in layout subviews
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         if isShown {
