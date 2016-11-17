@@ -17,7 +17,7 @@ class CAPSOptionsMenuAction: NSObject {
     /// - parameters:
     ///   - title: Title to be displayed on action button in menu
     ///   - handler: Completion handler for action button tap
-    init(title: String, handler: ((CAPSOptionsMenuAction) -> Void)) {
+    init(title: String, handler: @escaping ((CAPSOptionsMenuAction) -> Void)) {
         actionHandler = handler
         super.init()
     

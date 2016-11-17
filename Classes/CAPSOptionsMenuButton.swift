@@ -9,8 +9,8 @@
 import UIKit
 
 class CAPSOptionsMenuButton: UIButton {
-    var optionsMenuButtonBackgroundColor: UIColor = UIColor.whiteColor()
-    var optionsMenuButtonHighlightedColor: UIColor = UIColor.lightGrayColor()
+    var optionsMenuButtonBackgroundColor: UIColor = UIColor.white
+    var optionsMenuButtonHighlightedColor: UIColor = UIColor.lightGray
     
     /// Options Action Initializer
     ///
@@ -42,31 +42,31 @@ class CAPSOptionsMenuButton: UIButton {
     }
     
     // MARK: - Tap handling
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         touchDown()
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
         touchUp()
     }
     
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
-        super.touchesCancelled(touches, withEvent: event)
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
         touchUp()
     }
     
     // MARK: - Touch down/up
-    private func touchDown() {
-        UIView.animateWithDuration(0.1) { () -> Void in
+    fileprivate func touchDown() {
+        UIView.animate(withDuration: 0.1, animations: { () -> Void in
             self.backgroundColor = self.optionsMenuButtonHighlightedColor
-        }
+        }) 
     }
     
-    private func touchUp() {
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.15 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+    fileprivate func touchUp() {
+        let delayTime = DispatchTime.now() + Double(Int64(0.15 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
             self.backgroundColor = self.optionsMenuButtonBackgroundColor
         }
     }

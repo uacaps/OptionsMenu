@@ -29,7 +29,7 @@ class SmallOptionsMenuViewController: UIViewController {
     }
 
     func addOptionsMenu() {
-        optionsMenu = CAPSOptionsMenu(viewController: self, barButtonSystemItem: UIBarButtonSystemItem.Organize, keepBarButtonAtEdge: true)
+        optionsMenu = CAPSOptionsMenu(viewController: self, barButtonSystemItem: UIBarButtonSystemItem.organize, keepBarButtonAtEdge: true)
         optionsMenu?.menuActionButtonsHighlightedColor(UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0))
         optionsMenu?.menuCornerRadius(2.0)
         
@@ -49,20 +49,20 @@ class SmallOptionsMenuViewController: UIViewController {
         optionsMenu?.addAction(menuAction3)
     }
     
-    @IBAction func animationSegmentedControlChangedValue(sender: UISegmentedControl) {
+    @IBAction func animationSegmentedControlChangedValue(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            durationSegmentedControl.hidden = false
-            optionsMenu?.menuAnimationOption(AnimationOption.Expand)
+            durationSegmentedControl.isHidden = false
+            optionsMenu?.menuAnimationOption(AnimationOption.expand)
         } else if sender.selectedSegmentIndex == 1 {
-            durationSegmentedControl.hidden = false
-            optionsMenu?.menuAnimationOption(AnimationOption.Fade)
+            durationSegmentedControl.isHidden = false
+            optionsMenu?.menuAnimationOption(AnimationOption.fade)
         } else {
-            durationSegmentedControl.hidden = true
-            optionsMenu?.menuAnimationOption(AnimationOption.None)
+            durationSegmentedControl.isHidden = true
+            optionsMenu?.menuAnimationOption(AnimationOption.none)
         }
     }
     
-    @IBAction func animationDurationSegmentedControlChangedValue(sender: UISegmentedControl) {
+    @IBAction func animationDurationSegmentedControlChangedValue(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             optionsMenu?.menuAnimationDuration(0.2)
         } else {
