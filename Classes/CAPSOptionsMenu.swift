@@ -546,7 +546,7 @@ class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
             if actions.count != 0 && actions.count != 1 {
                 //SB loop over all actions and add sepearator
                 for i in 1..<actions.count{
-                    let view = UIView(frame:CGRect(x: 0, y: 43 * i, width: Int(maxMenuWidth), height: 1))
+                    let view = UIView(frame:CGRect(x: 0, y: 44 * i, width: Int(maxMenuWidth), height: 1))
                     view.backgroundColor = menuSeparatorBackgroundColor
                     menuScrollView?.addSubview(view)
                 }
