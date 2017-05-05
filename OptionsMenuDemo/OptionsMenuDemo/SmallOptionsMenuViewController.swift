@@ -30,16 +30,17 @@ class SmallOptionsMenuViewController: UIViewController {
 
     func addOptionsMenu() {
         
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Organize, target: nil, action: "null")
+        let addButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = addButton
         
         
         optionsMenu = CAPSOptionsMenu(viewController: self, barButtonItem: addButton, keepBarButtonAtEdge: true)
         
-        // optionsMenu = CAPSOptionsMenu(viewController: self, barButtonSystemItem: .Organize, keepBarButtonAtEdge: true)
+         //optionsMenu = CAPSOptionsMenu(viewController: self, barButtonSystemItem: .Organize, keepBarButtonAtEdge: true)
         
-        optionsMenu?.menuActionButtonsHighlightedColor(UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0))
-        optionsMenu?.menuCornerRadius(2.0)
+        optionsMenu?.menuActionButtonsHighlightedColor(color: UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0))
+        optionsMenu?.menuCornerRadius = 2.0
+        
         
         let menuAction1: CAPSOptionsMenuAction = CAPSOptionsMenuAction(title: "Action Title 1") { (action: CAPSOptionsMenuAction) -> Void in
             print("Tapped Action Button 1")
@@ -47,37 +48,37 @@ class SmallOptionsMenuViewController: UIViewController {
         
         menuAction1.image = UIImage(named: "ic_audio_24x24")
         
-        optionsMenu?.addAction(menuAction1)
+        optionsMenu?.addAction(action: menuAction1)
         
         let menuAction2: CAPSOptionsMenuAction = CAPSOptionsMenuAction(title: "Action Title 2") { (action: CAPSOptionsMenuAction) -> Void in
             print("Tapped Action Button 2")
         }
-        optionsMenu?.addAction(menuAction2)
+        optionsMenu?.addAction(action: menuAction2)
         
         let menuAction3: CAPSOptionsMenuAction = CAPSOptionsMenuAction(title: "Action Title 3") { (action: CAPSOptionsMenuAction) -> Void in
             print("Tapped Action Button 3")
         }
-        optionsMenu?.addAction(menuAction3)
+        optionsMenu?.addAction(action: menuAction3)
     }
     
     @IBAction func animationSegmentedControlChangedValue(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            durationSegmentedControl.hidden = false
-            optionsMenu?.menuAnimationOption(AnimationOption.Expand)
+            durationSegmentedControl.isHidden = false
+            optionsMenu?.menuAnimationOption = AnimationOption.expand
         } else if sender.selectedSegmentIndex == 1 {
-            durationSegmentedControl.hidden = false
-            optionsMenu?.menuAnimationOption(AnimationOption.Fade)
+            durationSegmentedControl.isHidden = false
+            optionsMenu?.menuAnimationOption = AnimationOption.fade
         } else {
-            durationSegmentedControl.hidden = true
-            optionsMenu?.menuAnimationOption(AnimationOption.None)
+            durationSegmentedControl.isHidden = true
+            optionsMenu?.menuAnimationOption = AnimationOption.none
         }
     }
     
     @IBAction func animationDurationSegmentedControlChangedValue(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            optionsMenu?.menuAnimationDuration(0.2)
+            optionsMenu?.menuAnimationDuration = 0.2
         } else {
-            optionsMenu?.menuAnimationDuration(0.0)
+            optionsMenu?.menuAnimationDuration = 0.0
         }
     }
 }
