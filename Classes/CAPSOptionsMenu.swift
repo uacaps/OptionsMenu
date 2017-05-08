@@ -9,7 +9,7 @@
 
 import UIKit
 
-public enum AnimationOption {
+public enum AnimationOption:Int {
     case fade
     case expand
     case none
@@ -305,6 +305,18 @@ public class CAPSOptionsMenu: UIView, UIGestureRecognizerDelegate {
     ///   - option: Animation option for the menu open/close animation style
     public func menuAnimationOption(option: AnimationOption) {
         menuAnimationOption = option
+    }
+    public func menuAnimationOption(option: Int) {
+        switch(option){
+        case 0:
+            menuAnimationOption = AnimationOption.expand
+        case 1:
+            menuAnimationOption = AnimationOption.fade
+        case 2:
+            menuAnimationOption = AnimationOption.none
+        default:break
+        }
+        
     }
     
     /// Menu Animation Duration
